@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Quản Lý Tuyển Sinh  -->
+    <section style="text-align: center; font-size: 20px;">
+        <h1>Quản Lý Tuyển Sinh</h1>
+        <input style="font-size: 20px;" type="text" id="diemChuan" placeholder="Nhập vào điểm chuẩn"><br><br>
+        <form action="/action_page.php">
+            <label for="cars">Khu Vực Ưu Tiên:</label>
+            <select style="font-size: 20px;" name="cars" id="khuVuc">
+                <option value="0">X</option>
+                <option value="2">A</option>
+                <option value="1">B</option>
+                <option value="0.5">C</option>
+            </select>
+        </form><br>
+        <form action="/action_page.php">
+            <label for="cars">Đối Tượng Ưu Tiên:</label>
+            <select style="font-size: 20px;" name="cars" id="doiTuong">
+                <option value="0">0</option>
+                <option value="2.5">1</option>
+                <option value="1.5">2</option>
+                <option value="1">3</option>
+            </select>
+        </form><br>
+    
+        <input style="font-size: 20px;" type="text" id="diemThiMot" placeholder="Nhập vào điểm thi">
+        <input style="font-size: 20px;" type="text" id="diemThiHai" placeholder="Nhập vào điểm thi">
+        <input style="font-size: 20px;" type="text" id="diemThiBa" placeholder="Nhập vào điểm thi">
+        <button style="font-size: 20px;" onclick="btnXetTuyen()">Xét Tuyển</button>
+        <div id="giaTriTrungBinh" style="display: none;">
+            <small>Tổng Điểm Của Bạn Là :</small>
+            <span id="spanTongDiem">0</span>
+        </div>
+    </section><br><br>
+    <hr><br>
+
+     <!-- Tính Tiền Điện -->
+     <section style="text-align: center; font-size: 20px;">
+        <h1>Tính Tiền Điện</h1>
+        <input style="font-size: 20px;" id="soDien" type="text" placeholder="Số KW Điện">
+        <button style="font-size: 20px;" onclick="btnTinhTien()">Tính Tiền</button>
+    </section><br><br>
+    <hr><br>
+
+      <!-- Tính Thuế Thu Nhập Cá Nhân -->
+      <section style="text-align: center; font-size: 20px;">
+        <h1>Tính Thuế Thu Nhập Cá Nhân</h1>
+        <input style="font-size: 20px;" id="tongThuNhap" type="text" placeholder="Tổng Thu Nhập 1 Năm">
+        <input style="font-size: 20px;" id="soNguoi" type="text" placeholder="Số Người Phụ Thuộc">
+        <button style="font-size: 20px;" onclick="btnTinh()">Tính</button>
+    </section><br><br>
+    <hr><br>
+
+
+     <!-- Tính Tiền Cáp -->
+     <section style="text-align: center; font-size: 20px;">
+        <h1>Tính Tiền Cáp</h1>
+        <form>
+            <h3>Vui Lòng Chọn Loại Khách Hàng:</h3>
+            <select style="font-size: 20px;" id = "khachHang" onchange = "chonKhachHang()" >
+            <option value="doanhNghiep">Doanh Nghiệp</option>
+            <option value="nhaDan">Nhà Dân</option>
+            </select>
+            </form><br>
+        <label> <input type="text" style="font-size: 20px;" name="programming" id="soKenh" placeholder="Số Kênh Cao Cấp"></label>
+        <label> <input type="text" style="font-size: 20px;" name="programming" id="soKetNoi" placeholder="Số Kết Nối"></label>
+        <button style="font-size: 20px;" onclick="btnHoaDon()">Tính Hóa Đơn</button>
+    </section><br><br>
+    <hr><br>
+    
+
+
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
